@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Paula Viviescas | Fullstack Developer</title>
+  <meta name="description" content="Portfolio profesional de Paula Andrea Viviescas Jaimes, Desarrolladora Junior Fullstack."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash" class="splash">
+  <div id="splash-petals"></div>
+  <div class="splash-inner">
+    <div class="splash-logo">✦ PV ✦</div>
+    <h1 class="splash-name">Paula Viviescas</h1>
+    <p class="splash-sub">Desarrolladora Fullstack · 2026</p>
+    <button id="enterBtn" class="enter-btn">Entrar al Portafolio ✦</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="hidden">
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">✦ PV</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting">Hola, soy</p>
+      <h1 class="hero-name">Paula Andrea<br/>Viviescas Jaimes</h1>
+      <div class="typewriter-row"><span id="tw"></span><span class="cursor">|</span></div>
+      <p class="hero-desc">Construyo experiencias digitales que conectan tecnología con impacto humano. Apasionada por el desarrollo web y la innovación con propósito.</p>
+      <div class="hero-btns">
+        <a href="#experiencia" class="btn-primary">Ver mi trabajo ✦</a>
+        <a href="#contacto" class="btn-outline">Contáctame</a>
+      </div>
+      <div class="socials">
+        <a href="#" class="soc-btn" title="GitHub">GH</a>
+        <a href="#" class="soc-btn" title="LinkedIn">in</a>
+        <a href="#" class="soc-btn" title="Portfolio">✦</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="blob-wrap">
+        <div class="blob-ring"></div>
+        <div class="blob-ring r2"></div>
+        <span class="blob-initials">PA</span>
+      </div>
+      <div class="tags-wrap">
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">PHP</span>
+        <span class="tag">WordPress</span>
+        <span class="tag">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-tag">Quién soy</p>
+        <h2 class="sec-title">Sobre <span>Mí</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">🌸</div>
+          <h3>Mi Perfil</h3>
+          <p>Ingeniera de Sistemas con experiencia en desarrollo web y participación en proyectos de innovación tecnológica. He trabajado como Joven Investigadora en el proyecto Conexión Natural, enfocado en turismo inteligente y sostenible.</p>
+        </div>
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">💡</div>
+          <h3>Mi Pasión</h3>
+          <p>Cuento con experiencia en el diseño y desarrollo de plataformas educativas e interactivas, integrando herramientas digitales para el aprendizaje colaborativo. Actualmente en el programa intensivo de Campuslands, centrado en software, IA y metodologías ágiles.</p>
+        </div>
+        <div class="glass-card about-card reveal">
+          <div class="about-icon">🚀</div>
+          <h3>Mi Enfoque</h3>
+          <p>Me destaco por mi aprendizaje rápido, pensamiento crítico y capacidad de adaptarme a entornos dinámicos y colaborativos. Comprometida con soluciones digitales que generen impacto real en las personas y comunidades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section section-alt" id="habilidades">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-tag">Lo que sé hacer</p>
+        <h2 class="sec-title"><span>Habilidades</span></h2>
+      </div>
+
+      <p class="carousel-label">✦ Tecnologías</p>
+      <div class="c-wrap">
+        <button class="c-btn prev" id="techPrev">‹</button>
+        <div class="c-track-container" style="padding:0 2.8rem;">
+          <div class="c-track" id="techTrack">
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">🌐</span><h4>HTML / CSS</h4><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">⚡</span><h4>JavaScript</h4><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">⚛️</span><h4>React</h4><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">🐍</span><h4>Python</h4><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">🗄️</span><h4>SQL</h4><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">🐘</span><h4>PHP</h4><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">📝</span><h4>WordPress</h4><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-card glass-card reveal"><span class="skill-emoji">🔧</span><h4>Git</h4><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div>
+          </div>
+        </div>
+        <button class="c-btn next" id="techNext">›</button>
+      </div>
+
+      <p class="carousel-label">✦ Habilidades Blandas</p>
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marqueeTrack">
+          <span class="soft-pill">🤝 Trabajo en equipo</span>
+          <span class="soft-pill">🧠 Pensamiento crítico</span>
+          <span class="soft-pill">🔄 Adaptabilidad</span>
+          <span class="soft-pill">🔍 Atención al detalle</span>
+          <span class="soft-pill">⏰ Gestión del tiempo</span>
+          <span class="soft-pill">💬 Comunicación efectiva</span>
+          <span class="soft-pill">🤝 Trabajo en equipo</span>
+          <span class="soft-pill">🧠 Pensamiento crítico</span>
+          <span class="soft-pill">🔄 Adaptabilidad</span>
+          <span class="soft-pill">🔍 Atención al detalle</span>
+          <span class="soft-pill">⏰ Gestión del tiempo</span>
+          <span class="soft-pill">💬 Comunicación efectiva</span>
+        </div>
+      </div>
+
+      <p class="carousel-label">✦ Idiomas</p>
+      <div class="lang-grid">
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇨🇴</span><h4>Español</h4><p>Nativo</p><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇬🇧</span><h4>Inglés</h4><p>C1 · Avanzado</p><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇫🇷</span><h4>Francés</h4><p>A2 · Básico</p><div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-tag">Trayectoria profesional</p>
+        <h2 class="sec-title">Mi <span>Experiencia</span></h2>
+      </div>
+      <div class="exp-c-wrap">
+        <div class="exp-c-track" id="expTrack">
+          <div class="exp-card glass-card">
+            <div class="exp-meta">
+              <div class="exp-dot"></div>
+              <div><span class="exp-date">Enero 2026 · Actual</span><h3>Trainee en Desarrollo de Software</h3><p class="exp-company">🏢 Indra Group Colombia</p></div>
+            </div>
+            <p class="exp-body">Diseño y desarrollo de sitio web institucional en WordPress con módulos de noticias, convocatorias, cursos y formación. Arquitectura escalable para future sistema de gestión de usuarios, artistas y convocatorias.</p>
+            <div class="exp-pills"><span class="exp-pill">WordPress</span><span class="exp-pill">PHP</span><span class="exp-pill">HTML/CSS</span></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-meta">
+              <div class="exp-dot"></div>
+              <div><span class="exp-date">Nov – Dic 2025</span><h3>Desarrolladora Web</h3><p class="exp-company">🏛️ Sec. Cultura y Turismo de Piedecuesta</p></div>
+            </div>
+            <p class="exp-body">Diseño y desarrollo del sitio web institucional en WordPress, incluyendo módulos de noticias, convocatorias, cursos y formación. Proyecto con arquitectura escalable para gestión futura de usuarios y artistas.</p>
+            <div class="exp-pills"><span class="exp-pill">WordPress</span><span class="exp-pill">PHP</span><span class="exp-pill">CSS</span></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-meta">
+              <div class="exp-dot"></div>
+              <div><span class="exp-date">Ene – Dic 2025</span><h3>Joven Investigadora</h3><p class="exp-company">🌿 Proyecto "Conexión Natural"</p></div>
+            </div>
+            <p class="exp-body">Apoyo investigativo en turismo de naturaleza en Río de Oro, Cesar, basado en tecnologías 4.0. Desarrollo de plataforma web con módulos interactivos, integración de recursos tecnológicos y documentación técnica.</p>
+            <div class="exp-pills"><span class="exp-pill">Web Dev</span><span class="exp-pill">Tech 4.0</span><span class="exp-pill">Investigación</span></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-meta">
+              <div class="exp-dot"></div>
+              <div><span class="exp-date">Feb – May 2025</span><h3>Desarrolladora · Innovación Tecnológica</h3><p class="exp-company">💡 CDT Smart Regions Center</p></div>
+            </div>
+            <p class="exp-body">Evaluación, validación y fortalecimiento de soluciones tecnológicas innovadoras. Desarrollo de proyectos de software en etapas tempranas con metodologías ágiles. Trabajo con equipos multidisciplinarios orientado al impacto regional.</p>
+            <div class="exp-pills"><span class="exp-pill">Agile</span><span class="exp-pill">Software Dev</span><span class="exp-pill">Innovación</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="dots" id="expDots">
+        <button class="dot active" data-i="0"></button>
+        <button class="dot" data-i="1"></button>
+        <button class="dot" data-i="2"></button>
+        <button class="dot" data-i="3"></button>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1rem;margin-top:1rem;">
+        <button class="c-btn prev" id="expPrev" style="position:static;transform:none;">‹</button>
+        <button class="c-btn next" id="expNext" style="position:static;transform:none;">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section class="section section-alt" id="educacion">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-tag">Formación académica</p>
+        <h2 class="sec-title"><span>Educación</span></h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-item glass-card reveal"><div class="edu-year">2026</div><div class="edu-info"><h3>Técnico en Desarrollo de Software</h3><p>🌸 Campuslands, Floridablanca</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3>Ingeniería de Sistemas</h3><p>🎓 Universidad Autónoma de Bucaramanga</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3>Bootcamp en Programación</h3><p>💻 Talento Tech</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2024</div><div class="edu-info"><h3>Cybersecurity Essentials</h3><p>🔐 Cisco Academy</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2024</div><div class="edu-info"><h3>Introduction to Cybersecurity</h3><p>🔒 Cisco Academy</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2023</div><div class="edu-info"><h3>NDG Linux Unhatched</h3><p>🐧 Cisco Academy</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-tag">Hablemos</p>
+        <h2 class="sec-title">¡<span>Contáctame</span>!</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card glass-card reveal"><span class="contact-icon">📧</span><h3>Email</h3><a href="mailto:paula@email.com">paula@email.com</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">💼</span><h3>LinkedIn</h3><a href="#" target="_blank">Ver perfil profesional</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">⌨️</span><h3>GitHub</h3><a href="#" target="_blank">Ver repositorios</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">🌐</span><h3>Portfolio</h3><a href="#" target="_blank">Ver proyectos</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>✦ Diseñado y construido con 💖 por Paula Andrea Viviescas Jaimes ✦</p>
+    <p class="f-sub">Desarrolladora Junior Fullstack · Campuslands 2026</p>
+  </footer>
+</div>
+
+<script>
+// =====================
+// SPLASH
+// =====================
+(function(){
+  const wrap = document.getElementById('splash-petals');
+  const items = ['🌸','🌺','✿','❀','✦','·','❋'];
+  for(let i=0;i<22;i++){
+    const el=document.createElement('span');
+    el.className='petal';
+    el.textContent=items[Math.floor(Math.random()*items.length)];
+    el.style.cssText=`left:${Math.random()*100}%;font-size:${0.8+Math.random()*1.4}rem;animation-delay:${Math.random()*5}s;animation-duration:${3+Math.random()*5}s;`;
+    wrap.appendChild(el);
+  }
+  document.getElementById('enterBtn').addEventListener('click',function(){
+    const splash=document.getElementById('splash');
+    splash.classList.add('fade-out');
+    setTimeout(()=>{
+      splash.style.display='none';
+      const main=document.getElementById('main');
+      main.classList.remove('hidden');
+      initAll();
+    },800);
+  });
+})();
+
+// =====================
+// INIT ALL
+// =====================
+function initAll(){
+  initCanvas();
+  initTypewriter();
+  initNav();
+  initTechCarousel();
+  initExpCarousel();
+  initScrollReveal();
+}
+
+// =====================
+// CANVAS BACKGROUND
+// =====================
+function initCanvas(){
+  const cv=document.getElementById('bgCanvas');
+  const ctx=cv.getContext('2d');
+  function resize(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+
+  const cols=['#FFB7C5','#C8B5FF','#FFD6A5','#B5EAD7','#FF8FAB','#E4D5FF','#FFDDE1'];
+  const pts=[];
+  for(let i=0;i<70;i++){
+    pts.push({
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+      r:2+Math.random()*5,
+      dx:(Math.random()-.5)*.4,
+      dy:-.15-Math.random()*.35,
+      c:cols[Math.floor(Math.random()*cols.length)],
+      a:.25+Math.random()*.5,
+      life:Math.random()*300
+    });
+  }
+  let t=0;
+  function draw(){
+    t++;
+    const s=Math.sin(t*.003)*.5+.5;
+    const g=ctx.createLinearGradient(0,0,cv.width,cv.height);
+    g.addColorStop(0,`hsl(${340+s*25},100%,97%)`);
+    g.addColorStop(.5,`hsl(${270+s*20},80%,97%)`);
+    g.addColorStop(1,`hsl(${25+s*15},100%,97%)`);
+    ctx.fillStyle=g;
+    ctx.fillRect(0,0,cv.width,cv.height);
+
+    // soft wave at bottom
+    ctx.save();
+    ctx.globalAlpha=0.12;
+    ctx.fillStyle=`hsl(${300+s*30},80%,85%)`;
+    ctx.beginPath();
+    ctx.moveTo(0,cv.height);
+    for(let x=0;x<=cv.width;x+=10){
+      ctx.lineTo(x,cv.height-60+Math.sin((x+t)*0.012)*40);
+    }
+    ctx.lineTo(cv.width,cv.height);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+
+    pts.forEach(p=>{
+      p.life++;
+      p.x+=p.dx+Math.sin(p.life*.015)*.3;
+      p.y+=p.dy;
+      if(p.y<-20){p.y=cv.height+20;p.x=Math.random()*cv.width;p.life=0;}
+      ctx.save();
+      ctx.globalAlpha=p.a*(0.5+Math.sin(p.life*.04)*.5);
+      ctx.fillStyle=p.c;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+      ctx.restore();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// =====================
+// TYPEWRITER
+// =====================
+function initTypewriter(){
+  const el=document.getElementById('tw');
+  const words=['Desarrolladora Fullstack','Ingeniera de Sistemas','Investigadora Tecnológica','Creadora de Experiencias Digitales'];
+  let wi=0,ci=0,del=false,timeout=100;
+  function tick(){
+    const w=words[wi];
+    if(del){el.textContent=w.slice(0,--ci);timeout=50;}
+    else{el.textContent=w.slice(0,++ci);timeout=100;}
+    if(!del&&ci===w.length){timeout=2200;del=true;}
+    else if(del&&ci===0){del=false;wi=(wi+1)%words.length;timeout=400;}
+    setTimeout(tick,timeout);
+  }
+  tick();
+}
+
+// =====================
+// NAV
+// =====================
+function initNav(){
+  const nav=document.getElementById('navbar');
+  const links=document.getElementById('navLinks');
+  const toggle=document.getElementById('navToggle');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+  toggle.addEventListener('click',()=>{
+    links.classList.toggle('open');
+    toggle.textContent=links.classList.contains('open')?'✕':'☰';
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t){t.scrollIntoView({behavior:'smooth'});links.classList.remove('open');toggle.textContent='☰';}
+    });
+  });
+}
+
+// =====================
+// TECH SKILLS CAROUSEL
+// =====================
+function initTechCarousel(){
+  const track=document.getElementById('techTrack');
+  const prev=document.getElementById('techPrev');
+  const next=document.getElementById('techNext');
+  let pos=0;
+  function cardW(){return (track.children[0]?.offsetWidth||180)+19;}
+  function maxPos(){return track.scrollWidth - track.parentElement.offsetWidth;}
+  next.addEventListener('click',()=>{pos=Math.min(pos+cardW(),maxPos());track.style.transform=`translateX(-${pos}px)`;});
+  prev.addEventListener('click',()=>{pos=Math.max(pos-cardW(),0);track.style.transform=`translateX(-${pos}px)`;});
+  // Touch
+  let ts=0;
+  track.addEventListener('touchstart',e=>{ts=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const diff=ts-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>40){diff>0?next.click():prev.click();}
+  });
+}
+
+// =====================
+// EXPERIENCE CAROUSEL
+// =====================
+function initExpCarousel(){
+  const track=document.getElementById('expTrack');
+  const prev=document.getElementById('expPrev');
+  const next=document.getElementById('expNext');
+  const dots=document.querySelectorAll('#expDots .dot');
+  let cur=0;
+  const total=track.children.length;
+
+  function visibleCards(){
+    if(window.innerWidth>=1024)return 3;
+    if(window.innerWidth>=768)return 2;
+    return 1;
+  }
+  function maxIdx(){return Math.max(0,total-visibleCards());}
+  function cardW(){
+    const vc=visibleCards();
+    return (track.parentElement.offsetWidth - (vc-1)*24) / vc + 24;
+  }
+
+  function update(){
+    cur=Math.min(cur,maxIdx());
+    track.style.transform=`translateX(-${cur*cardW()}px)`;
+    dots.forEach((d,i)=>d.classList.toggle('active',i===cur));
+  }
+
+  next.addEventListener('click',()=>{cur=(cur+1>maxIdx())?0:cur+1;update();});
+  prev.addEventListener('click',()=>{cur=(cur-1<0)?maxIdx():cur-1;update();});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{cur=i;update();}));
+  window.addEventListener('resize',update);
+  // Auto
+  setInterval(()=>{cur=(cur+1>maxIdx())?0:cur+1;update();},5000);
+  // Touch
+  let ts=0;
+  track.addEventListener('touchstart',e=>{ts=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const diff=ts-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>40){diff>0?next.click():prev.click();}
+  });
+}
+
+// =====================
+// SCROLL REVEAL
+// =====================
+function initScrollReveal(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+</script>
+</body>
+</html>
