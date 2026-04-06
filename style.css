@@ -226,11 +226,34 @@ body { font-family:'Inter',sans-serif; color:var(--text-dark); background:#FFF5F
 .lang-card p { color:var(--text-mid); font-size:0.85rem; margin-bottom:0.8rem; }
 
 /* EXPERIENCE CAROUSEL */
-.exp-c-wrap { position:relative; overflow:hidden; }
-.exp-c-track { display:flex; gap:1.5rem; transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); }
-.exp-card { min-width:calc(100% - 3rem); flex-shrink:0; }
-@media(min-width:768px) { .exp-card { min-width:calc(50% - 0.75rem); } }
-@media(min-width:1024px) { .exp-card { min-width:calc(33.33% - 1rem); } }
+.exp-c-wrap {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  padding:0.5rem 0;
+  margin:-0.5rem 0;
+}
+.exp-c-track {
+  display:flex;
+  gap:1.5rem;
+  transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  will-change:transform;
+  touch-action:pan-y;
+}
+/* flex-basis % = ancho del carril (exp-c-wrap), no del track; evita desbordes raros en móvil */
+.exp-card {
+  flex:0 0 100%;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+}
+@media(min-width:768px) {
+  .exp-card { flex:0 0 calc((100% - 1.5rem) / 2); }
+}
+@media(min-width:1024px) {
+  .exp-card { flex:0 0 calc((100% - 3rem) / 3); }
+}
+#experiencia .exp-c-wrap .glass-card:hover { transform:translateY(-4px); }
 .exp-meta { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
 .exp-dot { width:14px; height:14px; border-radius:50%; background:linear-gradient(135deg,var(--rose),var(--lavender)); flex-shrink:0; margin-top:5px; box-shadow:0 0 0 4px rgba(232,105,138,0.15); }
 .exp-date { font-size:0.8rem; color:var(--rose); font-weight:600; display:block; margin-bottom:0.3rem; letter-spacing:0.03em; }

@@ -196,12 +196,7 @@
           </div>
         </div>
       </div>
-      <div class="dots" id="expDots">
-        <button class="dot active" data-i="0"></button>
-        <button class="dot" data-i="1"></button>
-        <button class="dot" data-i="2"></button>
-        <button class="dot" data-i="3"></button>
-      </div>
+      <div class="dots" id="expDots" aria-label="Indicadores de experiencia"></div>
       <div style="display:flex;justify-content:center;gap:1rem;margin-top:1rem;">
         <button class="c-btn prev" id="expPrev" style="position:static;transform:none;">‹</button>
         <button class="c-btn next" id="expNext" style="position:static;transform:none;">›</button>
@@ -235,17 +230,16 @@
         <h2 class="sec-title">¡<span>Contáctame</span>!</h2>
       </div>
       <div class="contact-grid">
-        <div class="contact-card glass-card reveal"><span class="contact-icon">📧</span><h3>Email</h3><a href="mailto:paula@email.com">paula@email.com</a></div>
-        <div class="contact-card glass-card reveal"><span class="contact-icon">💼</span><h3>LinkedIn</h3><a href="#" target="_blank">Ver perfil profesional</a></div>
-        <div class="contact-card glass-card reveal"><span class="contact-icon">⌨️</span><h3>GitHub</h3><a href="#" target="_blank">Ver repositorios</a></div>
-        <div class="contact-card glass-card reveal"><span class="contact-icon">🌐</span><h3>Portfolio</h3><a href="#" target="_blank">Ver proyectos</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">📧</span><h3>Email</h3><a href="mailto:paulaajaiimes09@gmail.com">paulaajaiimes09@gmail.com</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">💼</span><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/paula-andrea-viviescas-jaimes/" target="_blank">Ver perfil profesional</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">⌨️</span><h3>GitHub</h3><a href="https://github.com/PaulaV09" target="_blank">Ver repositorios</a></div>
       </div>
     </div>
   </section>
 
   <footer>
     <p>✦ Diseñado y construido con 💖 por Paula Andrea Viviescas Jaimes ✦</p>
-    <p class="f-sub">Desarrolladora Junior Fullstack · Campuslands 2026</p>
+    <p class="f-sub">Desarrolladora Junior Fullstack</p>
   </footer>
 </div>
 
@@ -419,42 +413,62 @@ function initTechCarousel(){
 // =====================
 function initExpCarousel(){
   const track=document.getElementById('expTrack');
+  const wrap=track.parentElement;
   const prev=document.getElementById('expPrev');
   const next=document.getElementById('expNext');
-  const dots=document.querySelectorAll('#expDots .dot');
+  const dotsWrap=document.getElementById('expDots');
   let cur=0;
-  const total=track.children.length;
 
-  function visibleCards(){
-    if(window.innerWidth>=1024)return 3;
-    if(window.innerWidth>=768)return 2;
-    return 1;
+  function gapPx(){
+    const g=parseFloat(getComputedStyle(track).columnGap||getComputedStyle(track).gap)||0;
+    return g;
   }
-  function maxIdx(){return Math.max(0,total-visibleCards());}
-  function cardW(){
-    const vc=visibleCards();
-    return (track.parentElement.offsetWidth - (vc-1)*24) / vc + 24;
+  function stepPx(){
+    const first=track.children[0];
+    if(!first)return wrap.clientWidth||1;
+    return first.getBoundingClientRect().width+gapPx();
   }
-
+  function maxIdx(){
+    const s=stepPx();
+    if(s<=0)return 0;
+    const maxScroll=Math.max(0,track.scrollWidth-wrap.clientWidth);
+    return Math.max(0,Math.round(maxScroll/s));
+  }
+  function renderDots(mx){
+    dotsWrap.innerHTML='';
+    for(let i=0;i<=mx;i++){
+      const b=document.createElement('button');
+      b.type='button';
+      b.className='dot'+(i===cur?' active':'');
+      b.setAttribute('aria-label','Ver experiencia '+(i+1));
+      const idx=i;
+      b.addEventListener('click',()=>{cur=idx;update();});
+      dotsWrap.appendChild(b);
+    }
+  }
   function update(){
-    cur=Math.min(cur,maxIdx());
-    track.style.transform=`translateX(-${cur*cardW()}px)`;
-    dots.forEach((d,i)=>d.classList.toggle('active',i===cur));
+    const mx=maxIdx();
+    cur=Math.min(Math.max(0,cur),mx);
+    const s=stepPx();
+    track.style.transform='translateX(-'+(cur*s)+'px)';
+    renderDots(mx);
   }
 
-  next.addEventListener('click',()=>{cur=(cur+1>maxIdx())?0:cur+1;update();});
-  prev.addEventListener('click',()=>{cur=(cur-1<0)?maxIdx():cur-1;update();});
-  dots.forEach((d,i)=>d.addEventListener('click',()=>{cur=i;update();}));
-  window.addEventListener('resize',update);
-  // Auto
-  setInterval(()=>{cur=(cur+1>maxIdx())?0:cur+1;update();},5000);
-  // Touch
+  next.addEventListener('click',()=>{const mx=maxIdx();cur=(cur>=mx)?0:cur+1;update();});
+  prev.addEventListener('click',()=>{const mx=maxIdx();cur=(cur<=0)?mx:cur-1;update();});
+  let resizeT;
+  window.addEventListener('resize',()=>{
+    clearTimeout(resizeT);
+    resizeT=setTimeout(()=>requestAnimationFrame(update),120);
+  });
+  setInterval(()=>{const mx=maxIdx();if(mx<=0)return;cur=(cur>=mx)?0:cur+1;update();},5000);
   let ts=0;
   track.addEventListener('touchstart',e=>{ts=e.touches[0].clientX;},{passive:true});
   track.addEventListener('touchend',e=>{
     const diff=ts-e.changedTouches[0].clientX;
     if(Math.abs(diff)>40){diff>0?next.click():prev.click();}
   });
+  requestAnimationFrame(update);
 }
 
 // =====================
