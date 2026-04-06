@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Paula Viviescas | Fullstack Developer</title>
-  <meta name="description" content="Portfolio profesional de Paula Andrea Viviescas Jaimes, Desarrolladora Junior Fullstack."/>
+  <title id="pageTitle">Paula Viviescas | Fullstack Developer</title>
+  <meta id="pageDescription" name="description" content="Portfolio profesional de Paula Andrea Viviescas Jaimes, Desarrolladora Junior Fullstack."/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -15,8 +15,8 @@
   <div class="splash-inner">
     <div class="splash-logo">✦ PV ✦</div>
     <h1 class="splash-name">Paula Viviescas</h1>
-    <p class="splash-sub">Desarrolladora Fullstack · 2026</p>
-    <button id="enterBtn" class="enter-btn">Entrar al Portafolio ✦</button>
+    <p class="splash-sub" data-i18n="splashSub">Desarrolladora Fullstack · 2026</p>
+    <button id="enterBtn" class="enter-btn" data-i18n="enterBtn">Entrar al Portafolio ✦</button>
   </div>
 </div>
 
@@ -28,30 +28,29 @@
   <nav class="navbar" id="navbar">
     <div class="nav-logo">✦ PV</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#educacion">Educación</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a></li>
+      <li><a href="#habilidades" data-i18n="navSkills">Habilidades</a></li>
+      <li><a href="#experiencia" data-i18n="navExperience">Experiencia</a></li>
+      <li><a href="#educacion" data-i18n="navEducation">Educación</a></li>
+      <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
     </ul>
+    <div class="lang-switch" id="langSwitch" aria-label="Selector de idioma">
+      <button type="button" class="lang-btn active" data-lang="es">ES</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <p class="hero-greeting">Hola, soy</p>
+      <p class="hero-greeting" data-i18n="heroGreeting">Hola, soy</p>
       <h1 class="hero-name">Paula Andrea<br/>Viviescas Jaimes</h1>
       <div class="typewriter-row"><span id="tw"></span><span class="cursor">|</span></div>
-      <p class="hero-desc">Construyo experiencias digitales que conectan tecnología con impacto humano. Apasionada por el desarrollo web y la innovación con propósito.</p>
+      <p class="hero-desc" data-i18n="heroDesc">Construyo experiencias digitales que conectan tecnología con impacto humano. Apasionada por el desarrollo web y la innovación con propósito.</p>
       <div class="hero-btns">
-        <a href="#experiencia" class="btn-primary">Ver mi trabajo ✦</a>
-        <a href="#contacto" class="btn-outline">Contáctame</a>
-      </div>
-      <div class="socials">
-        <a href="#" class="soc-btn" title="GitHub">GH</a>
-        <a href="#" class="soc-btn" title="LinkedIn">in</a>
-        <a href="#" class="soc-btn" title="Portfolio">✦</a>
+        <a href="#experiencia" class="btn-primary" data-i18n="heroPrimaryBtn">Ver mi trabajo ✦</a>
+        <a href="#contacto" class="btn-outline" data-i18n="heroSecondaryBtn">Contáctame</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -77,24 +76,24 @@
   <section class="section" id="sobre-mi">
     <div class="container">
       <div class="sec-head reveal">
-        <p class="sec-tag">Quién soy</p>
-        <h2 class="sec-title">Sobre <span>Mí</span></h2>
+        <p class="sec-tag" data-i18n="aboutTag">Quién soy</p>
+        <h2 class="sec-title" data-i18n-html="aboutTitle">Sobre <span>Mí</span></h2>
       </div>
       <div class="about-grid">
         <div class="glass-card about-card reveal">
           <div class="about-icon">🌸</div>
-          <h3>Mi Perfil</h3>
-          <p>Ingeniera de Sistemas con experiencia en desarrollo web y participación en proyectos de innovación tecnológica. He trabajado como Joven Investigadora en el proyecto Conexión Natural, enfocado en turismo inteligente y sostenible.</p>
+          <h3 data-i18n="aboutCard1Title">Mi Perfil</h3>
+          <p data-i18n="aboutCard1Body">Ingeniera de Sistemas con experiencia en desarrollo web y participación en proyectos de innovación tecnológica. He trabajado como Joven Investigadora en el proyecto Conexión Natural, enfocado en turismo inteligente y sostenible.</p>
         </div>
         <div class="glass-card about-card reveal">
           <div class="about-icon">💡</div>
-          <h3>Mi Pasión</h3>
-          <p>Cuento con experiencia en el diseño y desarrollo de plataformas educativas e interactivas, integrando herramientas digitales para el aprendizaje colaborativo. Actualmente en el programa intensivo de Campuslands, centrado en software, IA y metodologías ágiles.</p>
+          <h3 data-i18n="aboutCard2Title">Mi Pasión</h3>
+          <p data-i18n="aboutCard2Body">Cuento con experiencia en el diseño y desarrollo de plataformas educativas e interactivas, integrando herramientas digitales para el aprendizaje colaborativo. Actualmente en el programa intensivo de Campuslands, centrado en software, IA y metodologías ágiles.</p>
         </div>
         <div class="glass-card about-card reveal">
           <div class="about-icon">🚀</div>
-          <h3>Mi Enfoque</h3>
-          <p>Me destaco por mi aprendizaje rápido, pensamiento crítico y capacidad de adaptarme a entornos dinámicos y colaborativos. Comprometida con soluciones digitales que generen impacto real en las personas y comunidades.</p>
+          <h3 data-i18n="aboutCard3Title">Mi Enfoque</h3>
+          <p data-i18n="aboutCard3Body">Me destaco por mi aprendizaje rápido, pensamiento crítico y capacidad de adaptarme a entornos dinámicos y colaborativos. Comprometida con soluciones digitales que generen impacto real en las personas y comunidades.</p>
         </div>
       </div>
     </div>
@@ -104,11 +103,11 @@
   <section class="section section-alt" id="habilidades">
     <div class="container">
       <div class="sec-head reveal">
-        <p class="sec-tag">Lo que sé hacer</p>
-        <h2 class="sec-title"><span>Habilidades</span></h2>
+        <p class="sec-tag" data-i18n="skillsTag">Lo que sé hacer</p>
+        <h2 class="sec-title" data-i18n-html="skillsTitle"><span>Habilidades</span></h2>
       </div>
 
-      <p class="carousel-label">✦ Tecnologías</p>
+      <p class="carousel-label" data-i18n="skillsTechLabel">✦ Tecnologías</p>
       <div class="c-wrap">
         <button class="c-btn prev" id="techPrev">‹</button>
         <div class="c-track-container" style="padding:0 2.8rem;">
@@ -126,7 +125,7 @@
         <button class="c-btn next" id="techNext">›</button>
       </div>
 
-      <p class="carousel-label">✦ Habilidades Blandas</p>
+      <p class="carousel-label" data-i18n="skillsSoftLabel">✦ Habilidades Blandas</p>
       <div class="marquee-wrap">
         <div class="marquee-track" id="marqueeTrack">
           <span class="soft-pill">🤝 Trabajo en equipo</span>
@@ -144,11 +143,11 @@
         </div>
       </div>
 
-      <p class="carousel-label">✦ Idiomas</p>
+      <p class="carousel-label" data-i18n="skillsLangLabel">✦ Idiomas</p>
       <div class="lang-grid">
-        <div class="lang-card glass-card reveal"><span class="lang-flag">🇨🇴</span><h4>Español</h4><p>Nativo</p><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
-        <div class="lang-card glass-card reveal"><span class="lang-flag">🇬🇧</span><h4>Inglés</h4><p>C1 · Avanzado</p><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-        <div class="lang-card glass-card reveal"><span class="lang-flag">🇫🇷</span><h4>Francés</h4><p>A2 · Básico</p><div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div></div>
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇨🇴</span><h4 data-i18n="langSpanish">Español</h4><p data-i18n="langSpanishLevel">Nativo</p><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇬🇧</span><h4 data-i18n="langEnglish">Inglés</h4><p data-i18n="langEnglishLevel">C1 · Avanzado</p><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        <div class="lang-card glass-card reveal"><span class="lang-flag">🇫🇷</span><h4 data-i18n="langFrench">Francés</h4><p data-i18n="langFrenchLevel">A2 · Básico</p><div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div></div>
       </div>
     </div>
   </section>
@@ -157,41 +156,41 @@
   <section class="section" id="experiencia">
     <div class="container">
       <div class="sec-head reveal">
-        <p class="sec-tag">Trayectoria profesional</p>
-        <h2 class="sec-title">Mi <span>Experiencia</span></h2>
+        <p class="sec-tag" data-i18n="expTag">Trayectoria profesional</p>
+        <h2 class="sec-title" data-i18n-html="expTitle">Mi <span>Experiencia</span></h2>
       </div>
       <div class="exp-c-wrap">
         <div class="exp-c-track" id="expTrack">
           <div class="exp-card glass-card">
             <div class="exp-meta">
               <div class="exp-dot"></div>
-              <div><span class="exp-date">Enero 2026 · Actual</span><h3>Trainee en Desarrollo de Software</h3><p class="exp-company">🏢 Indra Group Colombia</p></div>
+              <div><span class="exp-date" data-i18n="exp1Date">Enero 2026 · Actual</span><h3 data-i18n="exp1Role">Trainee en Desarrollo de Software</h3><p class="exp-company">🏢 Indra Group Colombia</p></div>
             </div>
-            <p class="exp-body">Diseño y desarrollo de sitio web institucional en WordPress con módulos de noticias, convocatorias, cursos y formación. Arquitectura escalable para future sistema de gestión de usuarios, artistas y convocatorias.</p>
+            <p class="exp-body" data-i18n="exp1Body">Diseño y desarrollo de sitio web institucional en WordPress con módulos de noticias, convocatorias, cursos y formación. Arquitectura escalable para future sistema de gestión de usuarios, artistas y convocatorias.</p>
             <div class="exp-pills"><span class="exp-pill">WordPress</span><span class="exp-pill">PHP</span><span class="exp-pill">HTML/CSS</span></div>
           </div>
           <div class="exp-card glass-card">
             <div class="exp-meta">
               <div class="exp-dot"></div>
-              <div><span class="exp-date">Nov – Dic 2025</span><h3>Desarrolladora Web</h3><p class="exp-company">🏛️ Sec. Cultura y Turismo de Piedecuesta</p></div>
+              <div><span class="exp-date" data-i18n="exp2Date">Nov – Dic 2025</span><h3 data-i18n="exp2Role">Desarrolladora Web</h3><p class="exp-company" data-i18n="exp2Company">🏛️ Sec. Cultura y Turismo de Piedecuesta</p></div>
             </div>
-            <p class="exp-body">Diseño y desarrollo del sitio web institucional en WordPress, incluyendo módulos de noticias, convocatorias, cursos y formación. Proyecto con arquitectura escalable para gestión futura de usuarios y artistas.</p>
+            <p class="exp-body" data-i18n="exp2Body">Diseño y desarrollo del sitio web institucional en WordPress, incluyendo módulos de noticias, convocatorias, cursos y formación. Proyecto con arquitectura escalable para gestión futura de usuarios y artistas.</p>
             <div class="exp-pills"><span class="exp-pill">WordPress</span><span class="exp-pill">PHP</span><span class="exp-pill">CSS</span></div>
           </div>
           <div class="exp-card glass-card">
             <div class="exp-meta">
               <div class="exp-dot"></div>
-              <div><span class="exp-date">Ene – Dic 2025</span><h3>Joven Investigadora</h3><p class="exp-company">🌿 Proyecto "Conexión Natural"</p></div>
+              <div><span class="exp-date" data-i18n="exp3Date">Ene – Dic 2025</span><h3 data-i18n="exp3Role">Joven Investigadora</h3><p class="exp-company" data-i18n="exp3Company">🌿 Proyecto "Conexión Natural"</p></div>
             </div>
-            <p class="exp-body">Apoyo investigativo en turismo de naturaleza en Río de Oro, Cesar, basado en tecnologías 4.0. Desarrollo de plataforma web con módulos interactivos, integración de recursos tecnológicos y documentación técnica.</p>
+            <p class="exp-body" data-i18n="exp3Body">Apoyo investigativo en turismo de naturaleza en Río de Oro, Cesar, basado en tecnologías 4.0. Desarrollo de plataforma web con módulos interactivos, integración de recursos tecnológicos y documentación técnica.</p>
             <div class="exp-pills"><span class="exp-pill">Web Dev</span><span class="exp-pill">Tech 4.0</span><span class="exp-pill">Investigación</span></div>
           </div>
           <div class="exp-card glass-card">
             <div class="exp-meta">
               <div class="exp-dot"></div>
-              <div><span class="exp-date">Feb – May 2025</span><h3>Desarrolladora · Innovación Tecnológica</h3><p class="exp-company">💡 CDT Smart Regions Center</p></div>
+              <div><span class="exp-date" data-i18n="exp4Date">Feb – May 2025</span><h3 data-i18n="exp4Role">Desarrolladora · Innovación Tecnológica</h3><p class="exp-company">💡 CDT Smart Regions Center</p></div>
             </div>
-            <p class="exp-body">Evaluación, validación y fortalecimiento de soluciones tecnológicas innovadoras. Desarrollo de proyectos de software en etapas tempranas con metodologías ágiles. Trabajo con equipos multidisciplinarios orientado al impacto regional.</p>
+            <p class="exp-body" data-i18n="exp4Body">Evaluación, validación y fortalecimiento de soluciones tecnológicas innovadoras. Desarrollo de proyectos de software en etapas tempranas con metodologías ágiles. Trabajo con equipos multidisciplinarios orientado al impacto regional.</p>
             <div class="exp-pills"><span class="exp-pill">Agile</span><span class="exp-pill">Software Dev</span><span class="exp-pill">Innovación</span></div>
           </div>
         </div>
@@ -208,13 +207,13 @@
   <section class="section section-alt" id="educacion">
     <div class="container">
       <div class="sec-head reveal">
-        <p class="sec-tag">Formación académica</p>
-        <h2 class="sec-title"><span>Educación</span></h2>
+        <p class="sec-tag" data-i18n="eduTag">Formación académica</p>
+        <h2 class="sec-title" data-i18n-html="eduTitle"><span>Educación</span></h2>
       </div>
       <div class="edu-grid">
-        <div class="edu-item glass-card reveal"><div class="edu-year">2026</div><div class="edu-info"><h3>Técnico en Desarrollo de Software</h3><p>🌸 Campuslands, Floridablanca</p></div></div>
-        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3>Ingeniería de Sistemas</h3><p>🎓 Universidad Autónoma de Bucaramanga</p></div></div>
-        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3>Bootcamp en Programación</h3><p>💻 Talento Tech</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2026</div><div class="edu-info"><h3 data-i18n="edu1Title">Técnico en Desarrollo de Software</h3><p data-i18n="edu1Place">🌸 Campuslands, Floridablanca</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3 data-i18n="edu2Title">Ingeniería de Sistemas</h3><p data-i18n="edu2Place">🎓 Universidad Autónoma de Bucaramanga</p></div></div>
+        <div class="edu-item glass-card reveal"><div class="edu-year">2025</div><div class="edu-info"><h3 data-i18n="edu3Title">Bootcamp en Programación</h3><p data-i18n="edu3Place">💻 Talento Tech</p></div></div>
         <div class="edu-item glass-card reveal"><div class="edu-year">2024</div><div class="edu-info"><h3>Cybersecurity Essentials</h3><p>🔐 Cisco Academy</p></div></div>
         <div class="edu-item glass-card reveal"><div class="edu-year">2024</div><div class="edu-info"><h3>Introduction to Cybersecurity</h3><p>🔒 Cisco Academy</p></div></div>
         <div class="edu-item glass-card reveal"><div class="edu-year">2023</div><div class="edu-info"><h3>NDG Linux Unhatched</h3><p>🐧 Cisco Academy</p></div></div>
@@ -226,20 +225,20 @@
   <section class="section" id="contacto">
     <div class="container">
       <div class="sec-head reveal">
-        <p class="sec-tag">Hablemos</p>
-        <h2 class="sec-title">¡<span>Contáctame</span>!</h2>
+        <p class="sec-tag" data-i18n="contactTag">Hablemos</p>
+        <h2 class="sec-title" data-i18n-html="contactTitle">¡<span>Contáctame</span>!</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-card glass-card reveal"><span class="contact-icon">📧</span><h3>Email</h3><a href="mailto:paulaajaiimes09@gmail.com">paulaajaiimes09@gmail.com</a></div>
-        <div class="contact-card glass-card reveal"><span class="contact-icon">💼</span><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/paula-andrea-viviescas-jaimes/" target="_blank">Ver perfil profesional</a></div>
-        <div class="contact-card glass-card reveal"><span class="contact-icon">⌨️</span><h3>GitHub</h3><a href="https://github.com/PaulaV09" target="_blank">Ver repositorios</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">💼</span><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/paula-andrea-viviescas-jaimes/" target="_blank" data-i18n="linkedinCta">Ver perfil profesional</a></div>
+        <div class="contact-card glass-card reveal"><span class="contact-icon">⌨️</span><h3>GitHub</h3><a href="https://github.com/PaulaV09" target="_blank" data-i18n="githubCta">Ver repositorios</a></div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>✦ Diseñado y construido con 💖 por Paula Andrea Viviescas Jaimes ✦</p>
-    <p class="f-sub">Desarrolladora Junior Fullstack</p>
+    <p data-i18n="footerMain">✦ Diseñado y construido con 💖 por Paula Andrea Viviescas Jaimes ✦</p>
+    <p class="f-sub" data-i18n="footerSub">Desarrolladora Junior Fullstack</p>
   </footer>
 </div>
 
@@ -273,6 +272,7 @@
 // INIT ALL
 // =====================
 function initAll(){
+  initI18n();
   initCanvas();
   initTypewriter();
   initNav();
@@ -353,9 +353,10 @@ function initCanvas(){
 // =====================
 function initTypewriter(){
   const el=document.getElementById('tw');
-  const words=['Desarrolladora Fullstack','Ingeniera de Sistemas','Investigadora Tecnológica','Creadora de Experiencias Digitales'];
+  const fallback=['Desarrolladora Fullstack','Ingeniera de Sistemas','Investigadora Tecnológica','Creadora de Experiencias Digitales'];
   let wi=0,ci=0,del=false,timeout=100;
   function tick(){
+    const words=(window.i18nWords&&window.i18nWords.length)?window.i18nWords:fallback;
     const w=words[wi];
     if(del){el.textContent=w.slice(0,--ci);timeout=50;}
     else{el.textContent=w.slice(0,++ci);timeout=100;}
@@ -364,6 +365,193 @@ function initTypewriter(){
     setTimeout(tick,timeout);
   }
   tick();
+}
+
+// =====================
+// I18N
+// =====================
+function initI18n(){
+  const dict={
+    es:{
+      htmlLang:'es',
+      pageTitle:'Paula Viviescas | Fullstack Developer',
+      pageDescription:'Portfolio profesional de Paula Andrea Viviescas Jaimes, Desarrolladora Junior Fullstack.',
+      splashSub:'Desarrolladora Fullstack · 2026',
+      enterBtn:'Entrar al Portafolio ✦',
+      navAbout:'Sobre mí',
+      navSkills:'Habilidades',
+      navExperience:'Experiencia',
+      navEducation:'Educación',
+      navContact:'Contacto',
+      heroGreeting:'Hola, soy',
+      heroDesc:'Construyo experiencias digitales que conectan tecnología con impacto humano. Apasionada por el desarrollo web y la innovación con propósito.',
+      heroPrimaryBtn:'Ver mi trabajo ✦',
+      heroSecondaryBtn:'Contáctame',
+      aboutTag:'Quién soy',
+      aboutTitle:'Sobre <span>Mí</span>',
+      aboutCard1Title:'Mi Perfil',
+      aboutCard1Body:'Ingeniera de Sistemas con experiencia en desarrollo web y participación en proyectos de innovación tecnológica. He trabajado como Joven Investigadora en el proyecto Conexión Natural, enfocado en turismo inteligente y sostenible.',
+      aboutCard2Title:'Mi Pasión',
+      aboutCard2Body:'Cuento con experiencia en el diseño y desarrollo de plataformas educativas e interactivas, integrando herramientas digitales para el aprendizaje colaborativo. Actualmente en el programa intensivo de Campuslands, centrado en software, IA y metodologías ágiles.',
+      aboutCard3Title:'Mi Enfoque',
+      aboutCard3Body:'Me destaco por mi aprendizaje rápido, pensamiento crítico y capacidad de adaptarme a entornos dinámicos y colaborativos. Comprometida con soluciones digitales que generen impacto real en las personas y comunidades.',
+      skillsTag:'Lo que sé hacer',
+      skillsTitle:'<span>Habilidades</span>',
+      skillsTechLabel:'✦ Tecnologías',
+      skillsSoftLabel:'✦ Habilidades Blandas',
+      skillsLangLabel:'✦ Idiomas',
+      langSpanish:'Español',
+      langSpanishLevel:'Nativo',
+      langEnglish:'Inglés',
+      langEnglishLevel:'C1 · Avanzado',
+      langFrench:'Francés',
+      langFrenchLevel:'A2 · Básico',
+      expTag:'Trayectoria profesional',
+      expTitle:'Mi <span>Experiencia</span>',
+      exp1Date:'Enero 2026 · Actual',
+      exp1Role:'Trainee en Desarrollo de Software',
+      exp1Body:'Diseño y desarrollo de sitio web institucional en WordPress con módulos de noticias, convocatorias, cursos y formación. Arquitectura escalable para futuro sistema de gestión de usuarios, artistas y convocatorias.',
+      exp2Date:'Nov – Dic 2025',
+      exp2Role:'Desarrolladora Web',
+      exp2Company:'🏛️ Sec. Cultura y Turismo de Piedecuesta',
+      exp2Body:'Diseño y desarrollo del sitio web institucional en WordPress, incluyendo módulos de noticias, convocatorias, cursos y formación. Proyecto con arquitectura escalable para gestión futura de usuarios y artistas.',
+      exp3Date:'Ene – Dic 2025',
+      exp3Role:'Joven Investigadora',
+      exp3Company:'🌿 Proyecto "Conexión Natural"',
+      exp3Body:'Apoyo investigativo en turismo de naturaleza en Río de Oro, Cesar, basado en tecnologías 4.0. Desarrollo de plataforma web con módulos interactivos, integración de recursos tecnológicos y documentación técnica.',
+      exp4Date:'Feb – May 2025',
+      exp4Role:'Desarrolladora · Innovación Tecnológica',
+      exp4Body:'Evaluación, validación y fortalecimiento de soluciones tecnológicas innovadoras. Desarrollo de proyectos de software en etapas tempranas con metodologías ágiles. Trabajo con equipos multidisciplinarios orientado al impacto regional.',
+      eduTag:'Formación académica',
+      eduTitle:'<span>Educación</span>',
+      edu1Title:'Técnico en Desarrollo de Software',
+      edu1Place:'🌸 Campuslands, Floridablanca',
+      edu2Title:'Ingeniería de Sistemas',
+      edu2Place:'🎓 Universidad Autónoma de Bucaramanga',
+      edu3Title:'Bootcamp en Programación',
+      edu3Place:'💻 Talento Tech',
+      contactTag:'Hablemos',
+      contactTitle:'¡<span>Contáctame</span>!',
+      linkedinCta:'Ver perfil profesional',
+      githubCta:'Ver repositorios',
+      footerMain:'✦ Diseñado y construido con 💖 por Paula Andrea Viviescas Jaimes ✦',
+      footerSub:'Desarrolladora Junior Fullstack',
+      typewriterWords:['Desarrolladora Fullstack','Ingeniera de Sistemas','Investigadora Tecnológica','Creadora de Experiencias Digitales'],
+      softSkills:['🤝 Trabajo en equipo','🧠 Pensamiento crítico','🔄 Adaptabilidad','🔍 Atención al detalle','⏰ Gestión del tiempo','💬 Comunicación efectiva'],
+      menuLabel:'Menú'
+    },
+    en:{
+      htmlLang:'en',
+      pageTitle:'Paula Viviescas | Fullstack Developer',
+      pageDescription:'Professional portfolio of Paula Andrea Viviescas Jaimes, Junior Fullstack Developer.',
+      splashSub:'Fullstack Developer · 2026',
+      enterBtn:'Enter Portfolio ✦',
+      navAbout:'About',
+      navSkills:'Skills',
+      navExperience:'Experience',
+      navEducation:'Education',
+      navContact:'Contact',
+      heroGreeting:'Hi, I am',
+      heroDesc:'I build digital experiences that connect technology with human impact. Passionate about web development and purpose-driven innovation.',
+      heroPrimaryBtn:'See my work ✦',
+      heroSecondaryBtn:'Contact me',
+      aboutTag:'Who I am',
+      aboutTitle:'About <span>Me</span>',
+      aboutCard1Title:'My Profile',
+      aboutCard1Body:'Systems Engineer with experience in web development and participation in technological innovation projects. I worked as a Young Researcher in the Conexión Natural project, focused on smart and sustainable tourism.',
+      aboutCard2Title:'My Passion',
+      aboutCard2Body:'I have experience designing and developing educational and interactive platforms, integrating digital tools for collaborative learning. I am currently in Campuslands intensive program focused on software, AI, and agile methodologies.',
+      aboutCard3Title:'My Focus',
+      aboutCard3Body:'I stand out for fast learning, critical thinking, and adaptability in dynamic and collaborative environments. Committed to digital solutions that generate real impact for people and communities.',
+      skillsTag:'What I do',
+      skillsTitle:'<span>Skills</span>',
+      skillsTechLabel:'✦ Technologies',
+      skillsSoftLabel:'✦ Soft Skills',
+      skillsLangLabel:'✦ Languages',
+      langSpanish:'Spanish',
+      langSpanishLevel:'Native',
+      langEnglish:'English',
+      langEnglishLevel:'C1 · Advanced',
+      langFrench:'French',
+      langFrenchLevel:'A2 · Basic',
+      expTag:'Professional journey',
+      expTitle:'My <span>Experience</span>',
+      exp1Date:'January 2026 · Present',
+      exp1Role:'Software Development Trainee',
+      exp1Body:'Design and development of an institutional website in WordPress with modules for news, calls, courses, and training. Scalable architecture for a future management system for users, artists, and calls.',
+      exp2Date:'Nov – Dec 2025',
+      exp2Role:'Web Developer',
+      exp2Company:'🏛️ Culture and Tourism Secretariat of Piedecuesta',
+      exp2Body:'Design and development of the institutional website in WordPress, including modules for news, calls, courses, and training. Project with scalable architecture for future management of users and artists.',
+      exp3Date:'Jan – Dec 2025',
+      exp3Role:'Young Researcher',
+      exp3Company:'🌿 "Conexión Natural" Project',
+      exp3Body:'Research support in nature tourism in Río de Oro, Cesar, based on 4.0 technologies. Development of a web platform with interactive modules, integration of technological resources, and technical documentation.',
+      exp4Date:'Feb – May 2025',
+      exp4Role:'Developer · Technological Innovation',
+      exp4Body:'Evaluation, validation, and strengthening of innovative technological solutions. Development of early-stage software projects with agile methodologies. Collaboration with multidisciplinary teams focused on regional impact.',
+      eduTag:'Academic background',
+      eduTitle:'<span>Education</span>',
+      edu1Title:'Software Development Technician',
+      edu1Place:'🌸 Campuslands, Floridablanca',
+      edu2Title:'Systems Engineering',
+      edu2Place:'🎓 Universidad Autónoma de Bucaramanga',
+      edu3Title:'Programming Bootcamp',
+      edu3Place:'💻 Talento Tech',
+      contactTag:'Let us talk',
+      contactTitle:'<span>Contact Me</span>',
+      linkedinCta:'View professional profile',
+      githubCta:'View repositories',
+      footerMain:'✦ Designed and built with 💖 by Paula Andrea Viviescas Jaimes ✦',
+      footerSub:'Junior Fullstack Developer',
+      typewriterWords:['Fullstack Developer','Systems Engineer','Technology Researcher','Digital Experience Creator'],
+      softSkills:['🤝 Teamwork','🧠 Critical thinking','🔄 Adaptability','🔍 Attention to detail','⏰ Time management','💬 Effective communication'],
+      menuLabel:'Menu'
+    }
+  };
+
+  const defaultLang=(localStorage.getItem('portfolioLang')||'es').toLowerCase();
+  let current=(defaultLang==='en')?'en':'es';
+
+  function apply(lang){
+    const t=dict[lang]||dict.es;
+    current=lang;
+    document.documentElement.lang=t.htmlLang;
+    document.title=t.pageTitle;
+    const desc=document.getElementById('pageDescription');
+    if(desc)desc.setAttribute('content',t.pageDescription);
+
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key=el.getAttribute('data-i18n');
+      if(t[key])el.textContent=t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+      const key=el.getAttribute('data-i18n-html');
+      if(t[key])el.innerHTML=t[key];
+    });
+
+    window.i18nWords=t.typewriterWords;
+    const softSkillEls=[...document.querySelectorAll('#marqueeTrack .soft-pill')];
+    const softSkills=t.softSkills||[];
+    softSkillEls.forEach((el,idx)=>{
+      if(softSkills.length){
+        el.textContent=softSkills[idx%softSkills.length];
+      }
+    });
+    localStorage.setItem('portfolioLang',lang);
+
+    const navToggle=document.getElementById('navToggle');
+    navToggle.setAttribute('aria-label',t.menuLabel);
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.classList.toggle('active',btn.getAttribute('data-lang')===lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>apply(btn.getAttribute('data-lang')));
+  });
+
+  apply(current);
 }
 
 // =====================
